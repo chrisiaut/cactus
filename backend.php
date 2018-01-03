@@ -29,7 +29,7 @@ if($_GET['getstatus'])
 {
     foreach($pins as $lamp => $pin)
     {
-        $lampstatus[$lamp] = rand(0,1);//;intval(trim(shell_exec("sudo /usr/bin/gpio -g read $pin"))); //TODO!!!!!!!!!!!
+        $lampstatus[$lamp] = intval(trim(shell_exec("sudo /usr/bin/gpio -g read $pin")));
     }
 
     exit(json_encode($lampstatus));
@@ -42,8 +42,6 @@ $port = $pins[$lamp];
 //if we got some crazy data, lets not do anything
 if(!is_numeric($lamp) || !$port || !is_numeric($status) || !in_array($lamp,$pins) || ($status>1 && $status<0))
   exit('Nope');
-
-exit('OK'); //TODO!!!!!!!!!!!
 
 //execute the command
 @shell_exec("sudo /usr/bin/gpio -g write $port $status");

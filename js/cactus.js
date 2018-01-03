@@ -24,10 +24,8 @@ $(document).ready(function() {
         var status = this.checked;
         var led = $(this).attr('led');
         console.log(led+" changed to "+status);
-        $.get( "backend.php?lamp="+led+"&status="+status, function( data ){
-            $.each(data, function(led, status) {
-                $('#led'+led).attr('checked', (status==1?true:false));
-            })
+        $.get( "backend.php?lamp="+led+"&status="+(status==true?1:0), function( data ){
+            
         }, "json" );
     });
 });

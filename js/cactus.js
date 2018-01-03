@@ -1,4 +1,3 @@
-var timer;
 var checkinterval = 5;//sek
 
 jQuery.ajaxSetup({ cache: false });
@@ -15,6 +14,7 @@ function loadData()
         $.each(data, function(led, status) {
             $('#led'+led).attr('checked', (status==1?true:false));
         })
+        console.log(data);
     }, "json" );
 }
 
@@ -30,6 +30,6 @@ $(document).ready(function() {
     });
 });
 
-timer = setInterval(function(){
+setInterval(function(){
     loadData();
 },checkinterval*1000);

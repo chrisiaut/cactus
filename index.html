@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Cactus lamp thing</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/cactus.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+        <div class="jumbotron" id="jumbo" >
+                <div class="container">
+                        <h1 class="text-center"><i class="fa fa-wifi" aria-hidden="true"></i> Wifi cactus <i class="fa fa-wifi" aria-hidden="true"></i></h1>
+                </div>
+        </div>
+
+        <div class="container">
+                <h1>What's this about?</h1>
+                <p>Read how this thing was made and what it does in my house: <a href="https://blog.haschek.at/2018/raspberry-pi-controlled-cactus.html">https://blog.haschek.at/2018/raspberry-pi-controlled-cactus.html</a></p>
+                
+                <pre>
+                        /||\
+                        |<input class="led" id="led3" led="3" type="checkbox">|
+                        ||||
+                        |||| /|\
+                   /|\  |||| |<input class="led" id="led7" led="7" type="checkbox">|
+                   |<input class="led" id="led1" led="1" type="checkbox">|  |<input class="led" id="led4" led="4" type="checkbox">| |||
+                   |||  |||| |<input class="led" id="led8" led="8" type="checkbox">|
+                   |||  |||| d||
+                   |<input class="led" id="led2" led="2" type="checkbox">|  |||||||/
+                   ||b._||||~~'
+                   \||||||<input class="led" id="led5" led="5" type="checkbox">||
+                    `~~~||||
+                        ||||
+                        |<input class="led" id="led6" led="6" type="checkbox">|
+        ~~~~~~~~~~~~~~~~||||~~~~~~~~~~~~~~
+          \/..__..--  . |||| \/  .  ..
+        \/         \/ \/    \/
+                .  \/              \/    .
+        . \/             .   \/     .
+           __...--..__..__       .     \/
+        \/  .   .    \/     \/    __..--..</pre>
+        </div> 
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="js/cactus.js"></script>
+    <script>
+        loadData();
+    </script>
+  </body>
+</html>

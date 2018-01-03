@@ -12,7 +12,7 @@ function loadData()
 {
     $.get( "backend.php?getstatus=1", function( data ) {
         $.each(data, function(led, status) {
-            $('#led'+led).attr('checked', (status==1?true:false));
+            $('#led'+led).prop('checked', (status==1?true:false));
         })
         console.log(data);
     }, "json" );

@@ -1,5 +1,5 @@
 var timer;
-var checkinterval = 10;//sek
+var checkinterval = 5;//sek
 
 jQuery.ajaxSetup({ cache: false });
 

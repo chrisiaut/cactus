@@ -40,7 +40,7 @@ $status = $_REQUEST['status'];
 $port = $pins[$lamp];
 
 //if we got some crazy data, lets not do anything
-if(!is_numeric($lamp) || !$port || !is_numeric($status) || !in_array($lamp,$pins) || ($status>1 && $status<0))
+if(!is_numeric($lamp) || !$port || !is_numeric($status) || ($status>1 && $status<0))
   exit('Nope');
 
 //execute the command
